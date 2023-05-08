@@ -1,6 +1,6 @@
 # Webcam IP
 
-![WebcamIP](readme/webcamip.png)
+![WebcamIP](readme/webcam-ip.png)
 
 A simple server application to for Streaming Webcam Image via WebSocket.  
 
