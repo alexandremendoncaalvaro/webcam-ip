@@ -57,8 +57,8 @@ Example:
 ```
 
 ## Client Example
-In the folder *wsl-webcam-capture-example* there is an example for the client in python to run inside WSL2.  
-The example applies a Grayscale filter in the received image fom the server.  
+In the folder *examples* there are aplications examples for the client in html/javascrit to an easy test and in python to run inside WSL2.  
+The Python example applies a Grayscale filter in the received image fom the server.  
 Change the **SERVER_IP** value in **get_camera_streaming.py** before run. 
 
 > You will need the server runnig to test the client
