@@ -2,11 +2,11 @@
 
 ![WebcamIP](readme/webcam-ip.png)
 
-A simple server application to for Streaming Webcam Image via WebSocket.
+A simple server application for Streaming Webcam Image via WebSocket.
 
 ## Motivation
 
-As WSL2 still doesn't have a simplified native support for using a Webcam, I decided to create this very basic C++ application for Windows and capture the Webcam signal via WebSocket in my OpenCV applications running on WSL2.
+As WSL2 still doesn't have simplified native support for using a Webcam, I decided to create this very basic C++ application for Windows and capture the Webcam signal via WebSocket in my OpenCV applications running on WSL2.
 
 Now Mac (Apple Silicon) is also supported.
 
@@ -20,14 +20,14 @@ Now Mac (Apple Silicon) is also supported.
 
 ## Build
 
-The easiest way to build C and C++ apps applications on Windows is by using Visual Studio Community and VcPkg to manage the extensions.
+The easiest way to build C and C++ applications on Windows is by using Visual Studio Community and VcPkg to manage the extensions.
 
-- Install [Visual Studio Community](https://visualstudio.microsoft.com/vs/features/cplusplus/) with C++ features;
+- Install [Visual Studio Community](https://visualstudio.microsoft.com/vs/features/cplusplus/) with C++ features.
 - Clone [VcPkg GitHub repository](https://github.com/Microsoft/vcpkg) in a short path directory like **'C:\tools\vcpkg'**:
   ```cmd
   git clone https://github.com/microsoft/vcpkg.git C:\tools\vcpkg
   ```
-- Run the VcPkg bootstrapping process
+- Run the VcPkg bootstrapping process:
   ```cmd
   cd C:\tools\vcpkg
   .\bootstrap-vcpkg.bat
@@ -37,7 +37,7 @@ The easiest way to build C and C++ apps applications on Windows is by using Visu
   vcpkg integrate install
   ```
 
-## Project requirements
+## Project Requirements
 
 ```cmd
 vcpkg install opencv crow boost-program-options
@@ -47,13 +47,13 @@ There is no need for any additional configuration. Just build the application.
 
 ## Run Server
 
-Go to the application folder using the terminal then run the camera server:
+Go to the built application folder using the terminal then run the camera server:
 
 ```cmd
 .\webcam-ip.exe
 ```
 
-> It will use the default options
+> It will use the default options.
 
 Options:  
  --help: Show help  
@@ -66,7 +66,7 @@ Example:
 .\webcam-ip.exe --port 8081 --camera 1
 ```
 
-## Accessing Windows networking apps from Linux WSL2 (SERVER IP):
+## Accessing Windows Networking Apps from Linux WSL2 (SERVER IP)
 
 Obtain the IP address of your host machine by running this command from your Linux distribution:
 
@@ -83,11 +83,11 @@ The picture below shows an example of this by connecting to a Node.js server run
 
 ## Pre-Requisites
 
-- MacOS (Apple Silicon) - Tested with Sonoma and M1 Pro Chip
+- macOS (Apple Silicon) - Tested with Sonoma and M1 Pro Chip
 - Git
 - [Homebrew](https://brew.sh/)
 
-## Project requirements
+## Project Requirements
 
 ```bash
 brew install cmake opencv boost
@@ -95,7 +95,7 @@ brew install cmake opencv boost
 
 ## Build
 
-From this project root path:
+From this project's root path:
 
 ```bash
 mkdir build
@@ -106,18 +106,18 @@ make
 
 ## Run Server
 
-Go to the application folder using the terminal then run the camera server:
+Go to the built application folder using the terminal then run the camera server:
 
 ```bash
 ./webcam-ip
 ```
 
-> It will use the default options
+> It will use the default options.
 
 Options:  
  --help: Show help  
  --port **arg**: Server port [default: 8080]  
- --camera **arg**: Windows Camera Index [default: 0]
+ --camera **arg**: Camera Index [default: 0]
 
 Example:
 
@@ -127,8 +127,12 @@ Example:
 
 # Client Example
 
-In the folder _examples_ there are aplications examples for the client in html/javascrit to an easy test and in python to run inside WSL2.  
-The Python example applies a Grayscale filter in the received image fom the server.  
-Change the **SERVER_IP** value in **get_camera_streaming.py** before run.
+With the server running, you can use the test clients to preview. In the folder _examples_ there are application examples for the client in:
 
-> You will need the server runnig to test the client
+- HTML/JavaScript for an easy test (just open index.html)
+- Python to run inside WSL2/Docker/another Linux machine in the same network.
+
+> The Python example applies a Grayscale filter to the received image from the server.  
+> Change the **SERVER_IP** value in **get_camera_streaming.py** before running.  
+> Change the port in the client if you change the default when running the server.  
+> You will need the server running to test the client.

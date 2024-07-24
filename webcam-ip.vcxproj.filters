@@ -26,5 +26,8 @@
     <ClInclude Include="configurations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="external\crow\crow_all.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
