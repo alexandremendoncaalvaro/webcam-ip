@@ -8,7 +8,7 @@ A simple server application to for Streaming Webcam Image via WebSocket.
 
 As WSL2 still doesn't have a simplified native support for using a Webcam, I decided to create this very basic C++ application for Windows and capture the Webcam signal via WebSocket in my OpenCV applications running on WSL2.
 
-Now I
+Now Mac (Apple Silicon) is also supported.
 
 # Windows
 
